@@ -1,0 +1,11 @@
+<div id="buttonContainer" #buttonContainer>
+    <img [src]="imageURL"/>
+    <div class="text" id="overlay" [class.show]="showOverlay" (mouseenter)="onMouseEnterButton()" (mouseleave)="onMouseExitButton()" #overlay>
+        <br>
+        <div id="title" class="text">{{description.title}}</div>
+        <br>
+        <br>
+        <br>
+        <div id="description" class="text">{{description.description}}</div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="titleContainer">
+    <h2>Projects</h2>
+</div>
+<app-filter></app-filter>
+<app-scrollable-gallery>
+    @for (project of projectDescriptions; track project)
+    {
+        <app-project-button [description]="project"></app-project-button>
+    }
+</app-scrollable-gallery>
+<!--<div id="coming-soon">
+    <div id="coming-soon-text">COMING SOON</div>
+</div>-->

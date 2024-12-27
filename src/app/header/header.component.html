@@ -1,0 +1,19 @@
+<div id="fakething">
+    <app-nav-button title="f" [visible]="false" sectionName="f"></app-nav-button>
+</div>
+<div id="header">
+    <div id="navBar">
+        @for (item of navBarItems; track $index) 
+        {
+            <app-nav-button [title]="item.title" [visible]="true" [sectionName]="item.sectionName"></app-nav-button>
+            <!--@if (!item.submenuTitles)
+            {
+                <app-nav-button [title]="item.title" [visible]="true"></app-nav-button>
+            }
+            @else 
+            {
+                <app-nav-button [title]="item.title" [submenuTitles]="item.submenuTitles" [visible]="true"></app-nav-button>
+            }-->
+        }
+    </div>
+</div>

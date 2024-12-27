@@ -1,0 +1,19 @@
+<iframe [src]="videoURL" title="video" allowfullscreen></iframe>
+<div id="info">
+    <h3 class="text">{{title}}</h3>
+    <div id="job-description" #jobDescription class="text">
+        {{description}}
+    </div>
+    <div id="responsibilities" class="text">
+        <b>My responsbilities:</b>
+        <ul>
+            @for(resp of responsibilities; track resp)
+            {
+                <li>{{resp}}</li>
+            }
+        </ul>
+    </div>
+    <a [href]="websiteURL" id="link" class="text" target="_blank">
+        {{websiteURL}}
+    </a>
+</div>

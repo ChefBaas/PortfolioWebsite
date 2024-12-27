@@ -1,0 +1,112 @@
+<svg width="1000" height="100" #svg id="svg">
+    <line x1="0" y1="50" x2="1000" y2="50" id="line"/>
+    @for (job of workExperienceService.jobDescriptionData; track job.title)
+    {
+
+    }
+    <text text-anchor="middle" font-size="18" x="150" y="30" class="textjes">Game Programmer</text>
+    <circle cx="150" cy="50" r="10" class="circle" onmouseenter="onMouseEnter(this)" onmouseleave="onMouseLeave(this)" onclick="onClick(this)" (click)="onClickCircle(0)"/>
+    <text text-anchor="middle" font-size="18" x="150" y="80" class="textjes">2018</text>
+    <text text-anchor="middle" font-size="18" x="150" y="30" class="textjes">HBO Teacher</text>
+    <circle cx="250" cy="50" r="10" class="circle" onmouseenter="onMouseEnter(this)" onmouseleave="onMouseLeave(this)" onclick="onClick(this)" (click)="onClickCircle(1)"/>
+    <text text-anchor="middle" font-size="18" x="150" y="80" class="textjes">2022</text>
+    <text text-anchor="middle" font-size="18" x="150" y="30" class="textjes">Application Manager</text>
+    <circle cx="350" cy="50" r="10" class="circle" onmouseenter="onMouseEnter(this)" onmouseleave="onMouseLeave(this)" onclick="onClick(this)" (click)="onClickCircle(2)"/>
+    <text text-anchor="middle" font-size="18" x="150" y="80" class="textjes">2023</text>
+    <text text-anchor="middle" font-size="18" x="150" y="30" class="textjes">Who knows?</text>
+    <circle cx="450" cy="50" r="10" class="circle" onmouseenter="onMouseEnter(this)" onmouseleave="onMouseLeave(this)" onclick="onClick(this)" (click)="onClickCircle(3)"/>
+    <text text-anchor="middle" font-size="18" x="150" y="80" class="textjes">2025</text>
+    <script>
+        svg = document.getElementById('svg');
+        circles = [];
+        texts = [];
+        line;
+        minWidth = 650;
+        
+        children = svg.children;
+        for (i = 0; i < children.length; i++)
+        {
+            if (children[i].className.baseVal === 'textjes')
+            {
+                texts.push(children[i]);
+            }
+            else if (children[i].className.baseVal === 'circle')
+            {
+                circles.push(children[i]);
+            }
+            else if (children[i].className.baseVal === 'line')
+            {
+                line = children[i];
+            }
+        }
+
+        activeCircle = circles[0];
+        desiredWidthRatio = 0.6;
+
+        window.onresize = onResize;
+        onClick(activeCircle);
+        onResize();
+
+        function onMouseEnter(circle)
+        {
+            circle.setAttribute('r', 12);
+            if (circle !== activeCircle)
+            {
+                circle.style.fill = "#dbab57";
+            }
+        }
+        function onMouseLeave(circle)
+        {
+            circle.setAttribute('r', 10);
+            if (circle === activeCircle)
+            {
+                circle.style.fill = "#578adb";
+            }
+            else
+            {
+                circle.style.fill = "#d35098";
+            }
+        }
+        function onClick(circle)
+        {
+            for (i = 0; i < circles.length; i++)
+            {
+                if (circles[i] === circle)
+                {
+                    circle.style.fill = "#578adb";
+                    activeCircle = circle;
+                }
+                else
+                {
+                    circles[i].style.fill = "#d35098";
+                }
+            }
+        }
+        function onResize()
+        {
+            calculatedWidth = window.innerWidth * desiredWidthRatio;
+            if (calculatedWidth < minWidth)
+            {
+                calculatedWidth = minWidth;
+                svg.style.alignSelf = 'flex-start';
+            }
+            else
+            {
+                svg.style.alignSelf = 'center';
+            }
+            svg.setAttribute('width', calculatedWidth);
+            line.setAttribute('x1', 100);
+            line.setAttribute('x2', calculatedWidth - 100);
+            space = calculatedWidth - 200;
+            for (i = 0; i < circles.length; i++)
+            {
+                circles[i].setAttribute('cx', 100 + space * i / (circles.length - 1));
+            }
+            for (i = 0; i < texts.length; i += 2)
+            {
+                texts[i].setAttribute('x', 100 + space * i / (texts.length - 2));
+                texts[i + 1].setAttribute('x', 100 + space * i / (texts.length - 2));
+            }
+        }
+    </script>
+</svg>

@@ -1,0 +1,68 @@
+:host
+{
+    background-color: #f8f9fa;
+    left:0;
+    top:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+}
+#content
+{
+    display: flex;
+    gap:50px;
+    width:80%;
+    align-items:center;
+}
+iframe
+{
+    flex-grow:1;
+    flex-basis:0;
+    min-width:400px;
+    min-height:300px;
+    max-width:600px;
+}
+#info
+{
+    flex-grow:1;
+    flex-basis:0;
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+}
+#intro
+{
+    display:flex;
+    flex-direction: column;
+}
+#descrption
+{
+    flex-grow:1;
+}
+.circle
+{
+    fill:#d35098;
+    stroke-width: 6px;
+    stroke:#f8f9fa;
+}
+#line
+{
+    stroke:black;
+    stroke-width: 1.5px;
+}
+#titleContainer
+{
+    align-self: flex-start;
+}
+h2
+{
+    margin-left:110px; /* make sure title smh aligns with video player */
+    color: #333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.textjes
+{
+    color: #333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

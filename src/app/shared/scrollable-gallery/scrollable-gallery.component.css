@@ -1,0 +1,40 @@
+:host
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+#scroll-container
+{
+    height:fit-content;
+    width:80%;
+    margin:auto;
+    overflow-x: auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    display: flex;
+    gap:50px;
+    height:300px;
+}
+.scroll-button
+{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-button:hover
+{
+    background-color: rgba(120, 120, 120, 0.5);
+}
+.scroll-text
+{
+    text-align:center;
+    font-size: 48px;
+    color:#333;
+}

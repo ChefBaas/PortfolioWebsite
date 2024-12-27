@@ -1,0 +1,9 @@
+<div class="scroll-button">
+    <div class="scroll-text">&lt;</div>
+</div>
+<div id="scroll-container" (dragstart)="onDragStart($event)" (drag)="onDrag($event)" #container>
+    <ng-content></ng-content>
+</div>
+<div class="scroll-button">
+    <div class="scroll-text">&gt;</div>
+</div>

@@ -1,0 +1,32 @@
+#parent
+{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding-bottom: 50px;
+}
+#contact
+{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+h2
+{
+    margin-left:110px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.child
+{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
+}
+#childText
+{
+    margin-left:110px;
+}

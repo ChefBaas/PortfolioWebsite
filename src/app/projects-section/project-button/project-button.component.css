@@ -1,0 +1,63 @@
+:host
+{
+    align-self:center;
+}
+#buttonContainer
+{
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width:200px;
+    height:200px;
+    border-radius: 20px;
+    transition:0.5s;
+}
+#buttonContainer:hover
+{
+    width:275px;
+    height:275px;
+}
+img
+{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#overlay
+{
+    position:absolute;
+    color:transparent;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:2;
+    border-radius: 20px;
+    opacity: 0;
+    text-wrap: wrap;
+    transition:0.5s;
+}
+#overlay.show
+{
+    opacity: 0.8;
+    z-index:2;
+}
+.projectText
+{
+    opacity: 1;
+    z-index:4;
+    text-align: center;
+    color:black;
+    width: 50%;
+    height: 50%;
+}
+#title
+{
+    align-self: left;
+    color:black;
+    font-weight: bold;
+}
+#description
+{
+    color:black;
+}

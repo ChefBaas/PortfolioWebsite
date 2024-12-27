@@ -1,0 +1,35 @@
+:host
+{
+    display:flex;
+    justify-content:center;
+    margin:auto;
+    gap:25px;
+}
+button
+{
+    flex-basis: 175px;
+    border:none;
+    border-radius: 5px;
+    border-color: transparent;
+    box-shadow: 1px 1px #333;
+    transition: 0.3s;
+    color:#333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:16px;
+}
+button:hover
+{
+    transform: translate(-1px, -1px);
+    box-shadow: 2px 2px #333;
+    font-weight: bold;
+}
+button.pressed
+{
+    transform:translate(1px, 1px);
+    box-shadow: inset 2px 2px #333;
+}
+button:active
+{
+    transform:translate(2px, 2px);
+    box-shadow: inset 3px 3px #333;
+}

@@ -1,0 +1,9 @@
+:host
+{
+    border-radius:50%;
+    flex-shrink:0;
+    flex-basis:75px;
+    min-height:75px;
+    border:none;
+    background-color: lightslategrey;
+}

@@ -1,0 +1,27 @@
+<canvas #canvas id="canvas"></canvas>
+<div id="landing">
+    <hr id="bar"/>
+    <div id="info">
+        @if (showPhoto)
+        {
+            <app-draggable-image (onHidePhoto)="onHidePhoto()"></app-draggable-image>
+        }
+        <div id="intro">
+            <div class="text">
+                Hey there! My name is Simon, nice to meet you. :) 
+                I'm fascinated by creating interactive and playful experiences.
+                Things that spark curiosity, that do something unexpected and encourage discovery.
+                Things that leave people smiling.
+                I'm currently looking for a job and I'd love to make them for you.
+            </div>
+            <br>
+            <div class="text">
+                This website is currently still under construction, but when it's done will contain plenty of interactive elements.
+                Some will be obvious, for others you'll have to be curious and challenge your initial assumption.
+                These hidden elements you can bring to life by interacting with them in some way.
+                You might for example try dragging my photo somewhere else...
+            </div>
+        </div>
+    </div>
+    <!--<app-achievements/>-->
+</div>

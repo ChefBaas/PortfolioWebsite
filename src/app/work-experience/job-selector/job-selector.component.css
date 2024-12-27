@@ -1,0 +1,27 @@
+.circle
+{
+    fill:#d35098;
+    stroke-width: 6px;
+    stroke:#f8f9fa;
+}
+#line
+{
+    stroke:black;
+    stroke-width: 1.5px;
+}
+.circle
+{
+    fill:#d35098;
+    stroke-width: 6px;
+    stroke:#f8f9fa;
+}
+#line
+{
+    stroke:black;
+    stroke-width: 1.5px;
+}
+.textjes
+{
+    color: #333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

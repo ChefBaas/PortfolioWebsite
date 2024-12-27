@@ -1,0 +1,29 @@
+#header
+{
+    background-color:transparent;
+    position:fixed;
+    padding-top:15px;
+    padding-bottom:15px;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    /* border-bottom:1px solid black; */
+    z-index:1;
+    background-color: white;
+}
+#navBar
+{
+    padding-right: 3%;
+    width:35%;
+    display:flex;
+    justify-content: flex-end;
+}
+#fakething
+{
+    padding-top:15px;
+    padding-bottom: 15px;
+    top:0;
+    left:0;
+}

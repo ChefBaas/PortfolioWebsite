@@ -1,0 +1,12 @@
+<div>
+    <div (mouseover)="showMenu()" (mouseleave)="hideMenu()" id="buttonMenu">
+        <a [href]="link" (mouseover)="onMouseEnterButton()" (mouseleave)="onMouseLeaveButton()" [class.hide]="visible === false" #button>{{title}}</a>
+        @if (showSubmenu)
+        {
+            @for (item of submenuTitles; track $index)
+            {
+                <app-nav-button [title]="item" [visible]="true" sectionName=""></app-nav-button>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,19 @@
+@if(!expandedView)
+{
+    <div id="bars">
+        <hr id="bar_background"/>
+        <hr id="bar_foreground" #bar/>
+    </div>
+    <div id="score">{{numberCompleted}} / {{achievements.length}}</div>
+    <button (click)="toggleExpanded()">See all achievements</button>
+}
+@else
+{
+    <div id="all_achievements">
+        @for (a of achievements; track a.id)
+        {
+            <app-achievement [name]="a.name" [description]="a.description"></app-achievement>
+        }
+    </div>
+    <button (click)="toggleExpanded()">Hide all achievements</button>
+}
