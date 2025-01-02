@@ -125,13 +125,13 @@ export class CanvasBackgroundService
         let widthString:string = getComputedStyle(this.canvas.nativeElement).width;
         while (isNaN(+widthString))
         {
-        widthString = widthString.substring(0, widthString.length - 1);
+            widthString = widthString.substring(0, widthString.length - 1);
         }
 
         let heightString:string = getComputedStyle(this.canvas.nativeElement).height;
         while (isNaN(+heightString))
         {
-        heightString = heightString.substring(0, heightString.length - 1);
+            heightString = heightString.substring(0, heightString.length - 1);
         }
 
         return new Vector2(+widthString, +heightString);
@@ -150,11 +150,45 @@ export class CanvasBackgroundService
     getNewBallData(chosenSize:number = -1, chosenPosition:Vector2 = new Vector2(0,0), chosenDirection:Vector2 = new Vector2(0,0), chosenSpeed:number = -1):BallData
     {
         let size:number = chosenSize === -1 ? 100 + Math.random() * 25 : chosenSize;
-        let position:Vector2 = (chosenPosition.x === 0 && chosenPosition.y === 0) ? new Vector2(2 * size + Math.random() * (this.canvasDimensions.x - 4 * size), size + Math.random() * (this.canvasDimensions.y - 4 * size)) : chosenPosition;
         let direction:Vector2 = (chosenDirection.x === 0 && chosenDirection.y === 0) ? new Vector2(-1 * Math.random() * 2, -1 + Math.random() * 2).normalize() : chosenDirection;
         let speed:number = chosenSpeed === -1 ? 0.1 + Math.random() * 0.2 : chosenSpeed;
 
+        let position!:Vector2;
+        if (chosenPosition.x === 0 && chosenPosition.y === 0)
+        {
+            position = this.getRandomBallPosition(size);
+            let positionSafe = this.checkBallPosition(position, size);
+            while (!positionSafe)
+            {
+                position = this.getRandomBallPosition(size);
+                positionSafe = this.checkBallPosition(position, size);
+            }
+        }
+        else
+        {
+            position.x = chosenPosition.x;
+            position.y = chosenPosition.y;
+        }
+
         return {size: size, position: position, direction: direction, speed: speed}
+    }
+
+    getRandomBallPosition(size:number):Vector2
+    {
+        return new Vector2(2 * size + Math.random() * (this.canvasDimensions.x - 4 * size), size + Math.random() * (this.canvasDimensions.y - 4 * size));
+    }
+
+    checkBallPosition(position:Vector2, size:number):boolean
+    {
+        for (let i:number = 0; i < this.balls.length; i++)
+        {
+            const ball:Ball = this.balls[i];
+            if (ball.position.sub(position).lengthSqr() < (ball.radius + size) * (ball.radius + size))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     resolveBallCollision(b1:Ball, b2:Ball):void
