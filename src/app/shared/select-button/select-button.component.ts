@@ -10,7 +10,7 @@ import { ColorsService } from '../colors.service';
 })
 export class SelectButtonComponent implements AfterViewInit
 {
-  @Input({required:true})title!:string;
+  @Input({required:true}) backgroundColor!:string;
   @ViewChild('selectbutton') button!:ElementRef<HTMLButtonElement>;
 
   colorsService:ColorsService = inject(ColorsService);
@@ -25,6 +25,7 @@ export class SelectButtonComponent implements AfterViewInit
   ngAfterViewInit(): void 
   {
     this.button.nativeElement.style.color = this.color;
+    this.button.nativeElement.style.backgroundColor = this.backgroundColor;
   }
 
   onMouseOver():void
@@ -38,7 +39,7 @@ export class SelectButtonComponent implements AfterViewInit
     if (!this.active)
     {
       this.button.nativeElement.style.color = this.color;
-      this.button.nativeElement.style.backgroundColor = '#f8f9fa';
+      this.button.nativeElement.style.backgroundColor = this.backgroundColor;
     }
   }
 

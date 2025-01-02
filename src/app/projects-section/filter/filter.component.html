@@ -1,5 +1,5 @@
 @for (filter of filters; track filter)
 {
     <!--<button [class.pressed]="buttons[filters.indexOf(filter)].active === true" (mouseover)="onMouseOver(filters.indexOf(filter))" (mouseleave)="onMouseLeave(filters.indexOf(filter))" (click)="onClick(filters.indexOf(filter))" #button>{{filter}}</button>-->
-    <app-select-button [title]="filter"></app-select-button>
+    <app-select-button backgroundColor="#f8f9fa">{{filter}}</app-select-button>
 }

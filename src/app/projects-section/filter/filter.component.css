@@ -1,11 +1,10 @@
 :host
 {
     display:flex;
-    margin:auto;
     justify-content:center;
     gap:25px;
 }
-button
+/*button
 {
     flex-basis: 175px;
     border:none;
@@ -32,4 +31,4 @@ button:active
 {
     transform:translate(3px, 3px);
     box-shadow: none;
-}
+}*/

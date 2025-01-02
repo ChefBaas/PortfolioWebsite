@@ -1,5 +1,9 @@
 <div id="titleContainer">
     <h2>Previous Experience</h2>
 </div>
+<div id="content-selection">
+    <app-select-button backgroundColor="white">Education</app-select-button>
+    <app-select-button backgroundColor="white">Work Experience</app-select-button>
+</div>
 <app-work-description></app-work-description>
 <app-job-selector (circleClicked)="onUpdateWorkDescription($event)"></app-job-selector>
