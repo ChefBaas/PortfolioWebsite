@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, inject, QueryList, ViewChildren } from '@angular/core';
 import { ColorsService } from '../../shared/colors.service';
+import { SelectButtonComponent } from "../../shared/select-button/select-button.component";
 
 type FilterButton =
 {
@@ -11,7 +12,7 @@ type FilterButton =
 @Component({
   selector: 'app-filter',
   standalone: true,
-  imports: [],
+  imports: [SelectButtonComponent],
   templateUrl: './filter.component.html',
   styleUrl: './filter.component.css'
 })
