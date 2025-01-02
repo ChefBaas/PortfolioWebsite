@@ -11,7 +11,7 @@ button
     border:none;
     border-radius: 5px;
     border-color: transparent;
-    box-shadow: 1px 1px #333;
+    box-shadow: 3px 3px #333;
     transition: 0.3s;
     color:#333;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,16 +20,16 @@ button
 button:hover
 {
     transform: translate(-1px, -1px);
-    box-shadow: 2px 2px #333;
+    box-shadow: 4px 4px #333;
     font-weight: bold;
 }
 button.pressed
 {
-    transform:translate(1px, 1px);
-    box-shadow: inset 2px 2px #333;
+    transform:translate(2px, 2px);
+    box-shadow: 1px 1px #333;
 }
 button:active
 {
-    transform:translate(2px, 2px);
-    box-shadow: inset 3px 3px #333;
+    transform:translate(3px, 3px);
+    box-shadow: none;
 }
