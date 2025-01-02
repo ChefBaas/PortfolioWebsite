@@ -7,5 +7,8 @@ export type ExperienceData =
     title:string,
     description:string,
     responsibilities:string[],
-    websiteURL:string
+    websiteURL:string,
+    year:string,
+    shortTitle:string,
+    id:number
 }

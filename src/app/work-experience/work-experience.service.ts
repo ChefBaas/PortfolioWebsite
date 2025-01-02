@@ -22,7 +22,10 @@ export class WorkExperienceService
           "Contribute to the games' design in an early stage and discuss ideas with partners",
           "Supervise a game development intern"
         ],
-        websiteURL: "https://www.springlab.nl"
+        websiteURL: "https://www.springlab.nl",
+        year: "2018",
+        shortTitle: "Game Programmer",
+        id:0
       },
       {
         videoURL:"https://www.youtube.com/embed/hwa-PFa6By8",
@@ -36,7 +39,10 @@ export class WorkExperienceService
           "Guide 2nd year personal portfolio assignments",
           "Supervise 3rd year internships"
         ],
-        websiteURL: "https://www.saxion.edu/programmes/bachelor/creative-media-and-game-technologies"
+        websiteURL: "https://www.saxion.edu/programmes/bachelor/creative-media-and-game-technologies",
+        year: "2022",
+        shortTitle: "HBO Teacher",
+        id:1
       },
       {
         videoURL:"https://www.youtube.com/embed/loLH7T3IJHk",
@@ -50,7 +56,10 @@ export class WorkExperienceService
           "Develop an on-boarding program for new colleagues",
           "Provide secondary support to colleagues that worked with systems tied to our application"
         ],
-        websiteURL: "https://www.politie.nl/"
+        websiteURL: "https://www.politie.nl/",
+        year: "2023",
+        shortTitle: "Application Manager",
+        id:2
       },
       {
         videoURL:"https://www.youtube.com/embed/dT4hLudO-is",
@@ -65,7 +74,10 @@ export class WorkExperienceService
           "Organise fun activities for colleagues",
           "Contribute to a social and open working atmosphere"
         ],
-        websiteURL:"[this website]"
+        websiteURL:"[this website]",
+        year: "2025",
+        shortTitle: "Yours?",
+        id:3
       }
     ];
     sanitizer:DomSanitizer;

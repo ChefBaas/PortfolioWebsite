@@ -2,7 +2,9 @@
     <line x1="0" y1="50" x2="1000" y2="50" id="line"/>
     @for (job of workExperienceService.jobDescriptionData; track job.title)
     {
-
+        <!--<text text-anchor="middle" font-size="18" x="150" y="30" class="textjes">{{job.shortTitle}}</text>
+        <circle r="10" class="circle" onmouseenter="onMouseEnter(this)" onmouseleave="onMouseLeave(this)" onclick="onClick(this)" (click)="onClickCircle(job.id)"/>
+        <text text-anchor="middle" font-size="18" class="textjes">{{job.year}}</text>-->
     }
     <text text-anchor="middle" font-size="18" x="150" y="30" class="textjes">Game Programmer</text>
     <circle cx="150" cy="50" r="10" class="circle" onmouseenter="onMouseEnter(this)" onmouseleave="onMouseLeave(this)" onclick="onClick(this)" (click)="onClickCircle(0)"/>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, inject, Output, ViewChild } from '@angular/core';
 import { WorkExperienceService } from '../work-experience.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { WorkExperienceService } from '../work-experience.service';
   templateUrl: './job-selector.component.html',
   styleUrl: './job-selector.component.css'
 })
-export class JobSelectorComponent 
+export class JobSelectorComponent
 {
   workExperienceService:WorkExperienceService = inject(WorkExperienceService);
   @Output() circleClicked:EventEmitter<number> = new EventEmitter<number>;
